@@ -18,9 +18,9 @@ class IEVMLauncher
     @wasRunning = false
     @captured = false
 
-  start: (url) ->
+  start: (vmUrl) ->
     # Replace `localhost` with the internal host IP as seen from within the vm.
-    vmUrl = "#{url}?id=#{@id}".replace 'localhost', iectrl.IEVM.hostIp
+    vmUrl = "#{vmUrl}?id=#{@id}".replace 'localhost', iectrl.IEVM.hostIp
 
     urlObj = url.parse vmUrl, true
 
